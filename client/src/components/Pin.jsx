@@ -3,7 +3,7 @@ import { client, urlFor } from '../client'
 import { Link, useNavigate } from 'react-router-dom'
 import { v4 as uuidv4 } from 'uuid'
 import { MdDownloadForOffline } from 'react-icons/md'
-import { AiTwoToneDelete } from 'react-icons/ai'
+import { AiTwotoneDelete } from 'react-icons/ai'
 import { BsFillArrowUpRightCircleFill } from 'react-icons/bs'
 import { fetchUser } from '../utils/fetchUser'
 
@@ -114,7 +114,7 @@ const Pin = ({ pin: { postedBy, image, _id, destination, save } }) => {
                   }}
                   className='bg-white p-2 bg-opacity-70 hover:opacity-100 text-dark font-bold px-5 py-1 text-base rounded-3xl hover:shadow-md outline-none'
                 >
-                  <AiTwoToneDelete />
+                  <AiTwotoneDelete />
                 </button>
               )}
             </div>
@@ -122,7 +122,7 @@ const Pin = ({ pin: { postedBy, image, _id, destination, save } }) => {
         )}
       </div>
       <Link
-        to={`/user-profile/${user?._id}`}
+        to={`/user-profile/${postedBy?._id}`}
         className='flex gap-2 mt-2 items-center'
       >
         <img
